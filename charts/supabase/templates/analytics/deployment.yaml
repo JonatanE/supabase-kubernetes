@@ -76,7 +76,7 @@ spec:
               {{- else }}
               value: {{ .Values.analytics.environment.DB_HOST }}
               {{- end }}
-            - name: DB_USER
+            - name: DB_USERNAME
               valueFrom:
                 secretKeyRef:
                   {{- if .Values.secret.db.secretRef }}
