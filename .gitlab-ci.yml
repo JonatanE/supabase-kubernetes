@@ -15,4 +15,4 @@ release-helm:
     - helm dependency update charts/supabase
     - helm package charts/supabase
     - helm repo add supabase https://gl.alv.is/api/v4/projects/$CI_PROJECT_ID/packages/helm/devel --username=$CI_DEPLOY_USER --password-stdin<<<$CI_DEPLOY_PASSWORD
-    - helm cm-push supabase-0.1.3.tgz supabase
+    - helm cm-push supabase-0.1.4.tgz supabase
