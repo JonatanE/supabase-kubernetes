@@ -76,6 +76,8 @@ spec:
               {{- else }}
               value: {{ .Values.analytics.environment.DB_HOST }}
               {{- end }}
+            - name: DB_SCHEMA
+              value: {{ .Values.analytics.environment.DB_SCHEMA | default "username" }}
             - name: DB_USERNAME
               valueFrom:
                 secretKeyRef:
